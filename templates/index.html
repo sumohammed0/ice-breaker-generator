@@ -34,11 +34,11 @@
                 <h2>Interesting Facts</h2>
                 <div id="facts"></div>
             </div>
-            <!-- <div>
-                <h2>Ice Breakers</h2>
-                <div id="ice-breakers"></div>
-            </div>
             <div>
+                <h2>Use this Ice Breaker!</h2>
+                <p id="icebreaker"></p>
+            </div>
+            <!-- <div>
                 <h2>Topics of Interest</h2>
                 <div id="topics-of-interest"></div>
             </div> -->
@@ -65,8 +65,8 @@
                     .then(data => {
                         document.getElementById("profile-pic").src = data.picture_url;
                         document.getElementById("summary").textContent = data.summary_and_facts.summary;
+                        document.getElementById("icebreaker").textContent = data.summary_and_facts.icebreaker; 
                         createHtmlList(document.getElementById("facts"), data.summary_and_facts.facts);
-                //   createHtmlList(document.getElementById("ice-breakers"), data.ice_breakers.ice_breakers); 
                 //   createHtmlList(document.getElementById("topics-of-interest"), data.interests.topics_of_interest); 
 
                         spinner.style.display = "none";

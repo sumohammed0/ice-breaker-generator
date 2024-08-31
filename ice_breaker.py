@@ -8,13 +8,14 @@ from output_parsers import summary_parser, Summary
 
 def ice_break_with(name: str) -> Tuple[Summary, str]:
     linkedin_url = linkedin_agent(name=name)
-    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=False)
+    linkedin_data = scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=True)
     
     # Define template string for summarizing information
     summary_template = """
         given the Linkedin information {information} about a person I want you to create:
         1. a short summary
         2. two interesting facts about them
+        3. a short one line to use as an icebreaker introduction
 
         \n{format_instructions}
     """
