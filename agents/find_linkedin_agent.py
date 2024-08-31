@@ -16,7 +16,7 @@ def find_profile(name: str):
 
     tools_for_agent  = [
         Tool(
-            name = "Crawl Google 4 linkedin profile page",
+            name = "Crawl Google 4 Linkedin Profile Page",
             func = get_profile_url,
             description = "useful for when you need to get the Linkedin Page URL",
         )
